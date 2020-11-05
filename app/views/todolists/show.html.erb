@@ -1,0 +1,9 @@
+<div class="blog-box">
+  <h2 class="blog-title"><%= @list.title %></h2>
+  <%= attachment_image_tag @list, :image, format: 'jpeg', size: "600x450" %>
+  <p class="blog-body"><%= @list.body %></p>
+  <div class="blog-btn">
+    <span class="btn-item"><%= link_to "編集", edit_todolist_path(@list.id) %></span>
+    <span class="btn-item"><%= link_to "削除", destroy_todolist_path(@list.id), method: :delete, "data-confirm" => "本当に削除しますか？" %></span>
+  </div>
+</div>
